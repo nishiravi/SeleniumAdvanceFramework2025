@@ -1,6 +1,6 @@
-package com.theTestingacademy.tests.VWOLogin;
+package com.theTestingacademy.tests.SampleTestcases;
 
-import com.theTestingacademy.pages.PageObjectModel.LoginPage_POM;
+import com.theTestingacademy.pages.PageObjectModel.VMO.LoginPage_POM;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class TestVWOLogin_POM {
+public class TestVWOLogin_UsingLoginPagePOM {
 
 
     @Description("Verify with valid credential Login is successful")
