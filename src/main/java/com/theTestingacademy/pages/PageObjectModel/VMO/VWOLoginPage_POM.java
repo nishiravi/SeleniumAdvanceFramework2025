@@ -5,15 +5,13 @@ import com.theTestingacademy.utils.PropertiesReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static com.theTestingacademy.driver.DriverManager.driver;
-
-public class LoginPage_POM extends CommonToAllPages {
+public class VWOLoginPage_POM extends CommonToAllPages {
 
 
     // webDriver installation
     public WebDriver driver;
 
-    public LoginPage_POM(WebDriver driver) {
+    public VWOLoginPage_POM(WebDriver driver) {
         this.driver = driver;
     }
 

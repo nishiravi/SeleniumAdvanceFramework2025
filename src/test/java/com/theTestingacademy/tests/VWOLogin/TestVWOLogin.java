@@ -2,8 +2,8 @@ package com.theTestingacademy.tests.VWOLogin;
 
 import com.theTestingacademy.base.CommanToAllTest;
 import com.theTestingacademy.driver.DriverManager;
-import com.theTestingacademy.pages.PageObjectModel.VMO.DashboardPage_POM;
-import com.theTestingacademy.pages.PageObjectModel.VMO.LoginPage_POM;
+import com.theTestingacademy.pages.PageObjectModel.VMO.VWODashboardPage_POM;
+import com.theTestingacademy.pages.PageObjectModel.VMO.VWOLoginPage_POM;
 import com.theTestingacademy.utils.PropertiesReader;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
@@ -20,9 +20,9 @@ public class TestVWOLogin extends CommanToAllTest {
     @Owner("Nishi Ravi")
     @Test
     public void testVWOLoginPositive() throws InterruptedException {
-        LoginPage_POM login = new LoginPage_POM(DriverManager.getDriver());
+        VWOLoginPage_POM login = new VWOLoginPage_POM(DriverManager.getDriver());
         login.logintoVMOwithValidcredentials(PropertiesReader.readKey("username"), PropertiesReader.readKey("password"));
-        DashboardPage_POM dashboardPagePom=new DashboardPage_POM(DriverManager.getDriver());
+        VWODashboardPage_POM dashboardPagePom=new VWODashboardPage_POM(DriverManager.getDriver());
         String displayedusername=dashboardPagePom.loogedinuserName();
         Assert.assertEquals(displayedusername,PropertiesReader.readKey("expected_username"));
         System.out.println(dashboardPagePom.dashBoardsuccessmsg());
@@ -33,7 +33,7 @@ public class TestVWOLogin extends CommanToAllTest {
     @Owner("Nishi Ravi")
     @Test
     public void testVWOLoginNegtestive() throws InterruptedException {
-        LoginPage_POM login = new LoginPage_POM(DriverManager.getDriver());
+        VWOLoginPage_POM login = new VWOLoginPage_POM(DriverManager.getDriver());
         String errormsgText = login.logintoVMOwithInValidcredentials(PropertiesReader.readKey("invalid_username"), PropertiesReader.readKey("invalid_password"));
         assertThat(errormsgText).isNotBlank().isNotNull().isNotEmpty();
         Assert.assertEquals(errormsgText, PropertiesReader.readKey("error_message"));

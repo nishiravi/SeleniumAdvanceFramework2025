@@ -1,6 +1,6 @@
 package com.theTestingacademy.tests.SampleTestcases;
 
-import com.theTestingacademy.pages.PageObjectModel.VMO.LoginPage_POM;
+import com.theTestingacademy.pages.PageObjectModel.VMO.VWOLoginPage_POM;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +20,7 @@ public class TestVWOLogin_UsingLoginPagePOM {
         WebDriver driver = new ChromeDriver();
         driver.get("https://app.vwo.com/");
         driver.manage().window().maximize();
-        LoginPage_POM login = new LoginPage_POM(driver);
+        VWOLoginPage_POM login = new VWOLoginPage_POM(driver);
         login.logintoVMOwithValidcredentials("admin@gmail.com", "admin@123");
     }
 
@@ -31,7 +31,7 @@ public class TestVWOLogin_UsingLoginPagePOM {
         WebDriver driver = new ChromeDriver();
         driver.get("https://app.vwo.com/");
         driver.manage().window().maximize();
-        LoginPage_POM login = new LoginPage_POM(driver);
+        VWOLoginPage_POM login = new VWOLoginPage_POM(driver);
         String errormsgText = login.logintoVMOwithInValidcredentials("abc", "123");
         assertThat(errormsgText).isNotBlank().isNotNull().isNotEmpty();
         Assert.assertEquals(errormsgText, "Your email, password, IP address or location did not match");
