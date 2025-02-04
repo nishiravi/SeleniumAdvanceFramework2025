@@ -39,7 +39,7 @@ public class TestVWOLogin_PMO extends CommanToAllTest {
     @Description("Verify invalid credential Login throws error msg")
     @Owner("Nishi Ravi")
     @Test
-    public void testVWOLoginNegtestive() throws InterruptedException {
+    public void testVWOLoginNegative() throws InterruptedException {
         logger.info("Start of testcase");
         VWOLoginPage_POM login = new VWOLoginPage_POM(DriverManager.getDriver());
         String errormsgText = login.logintoVMOwithInValidcredentials(PropertiesReader.readKey("invalid_username"), PropertiesReader.readKey("invalid_password"));
