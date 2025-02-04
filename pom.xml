@@ -131,9 +131,10 @@
           <version>2.22.1</version>
           <configuration>
             <suiteXmlFiles>
-              <suiteXmlFile>C:\Users\rnish\Development\workspcae2024\ATB8XSeleniumAdvanceFramework\VWOtestng.xml</suiteXmlFile>
+              <suiteXmlFile>C:/Users/rnish/Development/workspcae2024/ATB8XSeleniumAdvanceFramework/VWOtestng.xml</suiteXmlFile>
             </suiteXmlFiles>
           </configuration>
+
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
