@@ -40,14 +40,16 @@ public class TestVWOLogin_PMO extends CommanToAllTest {
     @Owner("Nishi Ravi")
     @Test
     public void testVWOLoginNegtestive() throws InterruptedException {
+        logger.info("Start of testcase");
         VWOLoginPage_POM login = new VWOLoginPage_POM(DriverManager.getDriver());
         String errormsgText = login.logintoVMOwithInValidcredentials(PropertiesReader.readKey("invalid_username"), PropertiesReader.readKey("invalid_password"));
         assertThat(errormsgText).isNotBlank().isNotNull().isNotEmpty();
         Assert.assertEquals(errormsgText, PropertiesReader.readKey("error_message"));
         // To check Retry Logic
-        // Assert.assertEquals(errormsgText, PropertiesReader.readKey("invalid_error_message"));
+        //Assert.assertEquals(errormsgText, PropertiesReader.readKey("invalid_error_message"));
         System.out.println(errormsgText);
         driver.quit();
+        logger.info("End of testcase");
 
     }
 
