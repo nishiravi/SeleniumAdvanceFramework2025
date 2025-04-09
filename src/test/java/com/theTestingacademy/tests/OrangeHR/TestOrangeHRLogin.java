@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class TestOrangeHRLogin extends CommanToAllTest {
 
-    @Description("Verify Login for Valid Credentials")
+    @Description("Verify OrangeHRLogin for Valid Credentials")
     @Owner("Nishi Ravi")
     @Test
     public void testPositiveLogin()
