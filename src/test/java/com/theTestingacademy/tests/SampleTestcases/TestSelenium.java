@@ -8,7 +8,7 @@ import io.qameta.allure.Description;
 
 public class TestSelenium {
 
-    @Description("Intial Test")
+    @Description("Intial Test of login") 
     @Test
     public void verifydryrun()
     {
